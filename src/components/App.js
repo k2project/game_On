@@ -16,7 +16,7 @@ class App extends Component {
         this.state={
             levels:{
                 currentLevel:1,//1-4
-                completedLevels:4, //0-4
+                completedLevels:0, //0-4
             },
             cookies:true,
         }
