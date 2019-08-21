@@ -112,7 +112,9 @@
         color: $color-primary;
     }
 }
-
+.Project__scrolls{
+    display: none;
+}
 @include desktop-sm{
     .Project__img{
         width: 120%;
@@ -142,6 +144,18 @@
         }
 
     }
+    .Project__scrolls{
+        display: block;
+        position: absolute;
+        bottom: 5rem;
+        right: 5rem;
+        font-size: 3rem;
+        z-index: 99;
+        div{
+            cursor: pointer;
+            transform: scaleY(1.4);
+        }
+    }
 }
 
 @include mobile{
@@ -169,6 +183,7 @@
         top: 7rem;
         left: 5rem;
     }
+
 }
 @include mobile-sm{
     .Project_2clm{
@@ -196,6 +211,9 @@
         margin-top: -2rem;
         margin-bottom: -3rem;
         top: 1.5rem;
+    }
+    .Project__scrolls{
+        right: 3rem;
     }
 }
 @include landscape{

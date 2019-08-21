@@ -288,7 +288,7 @@ footer{
 /* ...1200=====1024====tablet=====768=====mobile===480====320.... */
 @include desktop-sm{
     body {
-        border: solid .2rem orange;
+        // border: solid .2rem orange;
     }
     .section{
         grid-template-columns: 10rem 1fr 8rem;
@@ -302,7 +302,7 @@ footer{
 }
 @include tablet{
     body {
-        border: solid .2rem red;
+        // border: solid .2rem red;
     }
     .section{
         grid-template-columns: 1fr;
@@ -322,7 +322,7 @@ footer{
 }
 @include mobile{
     body {
-        border: solid .2rem blue;
+        // border: solid .2rem blue;
     }
     .section_2clm h2{
         font-size: 2.2rem;
@@ -353,7 +353,7 @@ footer{
 }
 @include mobile-sm{
     body {
-        border: solid .2rem yellow;
+        // border: solid .2rem yellow;
 
     }
     .Cookies{

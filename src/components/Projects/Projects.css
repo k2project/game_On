@@ -112,8 +112,6 @@ footer {
 
 /* ...1200=====1024====tablet=====768=====mobile===480====320.... */
 @media only screen and (max-width: 1200px) {
-  body {
-    border: solid .2rem orange; }
   .section {
     grid-template-columns: 10rem 1fr 8rem; }
   .section__title span {
@@ -122,8 +120,6 @@ footer {
     padding: 15rem 6rem; } }
 
 @media only screen and (max-width: 1024px) {
-  body {
-    border: solid .2rem red; }
   .section {
     grid-template-columns: 1fr; }
   .section__title span {
@@ -136,8 +132,6 @@ footer {
     padding: 2rem 4rem; } }
 
 @media only screen and (max-width: 768px) {
-  body {
-    border: solid .2rem blue; }
   .section_2clm h2 {
     font-size: 2.2rem;
     margin-bottom: 3rem; }
@@ -158,8 +152,6 @@ footer {
     padding-top: 1rem; } }
 
 @media only screen and (max-width: 480px) {
-  body {
-    border: solid .2rem yellow; }
   .Cookies {
     padding: 2rem 3rem; } }
 
@@ -285,6 +277,9 @@ footer {
   .theme-level-4 .Project__id {
     color: #82c91e; }
 
+.Project__scrolls {
+  display: none; }
+
 @media only screen and (max-width: 1200px) {
   .Project__img {
     width: 120%;
@@ -305,7 +300,17 @@ footer {
     display: grid;
     grid-template-columns: auto 1fr; }
     .Project__multiple img {
-      margin-left: 1rem; } }
+      margin-left: 1rem; }
+  .Project__scrolls {
+    display: block;
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    font-size: 3rem;
+    z-index: 99; }
+    .Project__scrolls div {
+      cursor: pointer;
+      transform: scaleY(1.4); } }
 
 @media only screen and (max-width: 768px) {
   .stickyElement {
@@ -343,7 +348,9 @@ footer {
   .Project .btn__brick {
     margin-top: -2rem;
     margin-bottom: -3rem;
-    top: 1.5rem; } }
+    top: 1.5rem; }
+  .Project__scrolls {
+    right: 3rem; } }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .Project__id {

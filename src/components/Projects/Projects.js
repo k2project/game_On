@@ -48,9 +48,11 @@ function displayProject(project){
                 </p>}
 
             </div>
-            {/* <div className="text_ctr"> */}
-                <img src={require('./../../imgs/'+project.img)} alt="projects" className="Project__img"/>
-            {/* </div> */}
+            <img src={require('./../../imgs/'+project.img)} alt="projects" className="Project__img"/>
+        </div>
+        <div className="Project__scrolls">
+            <div onClick={()=>window.scrollTo(0,0)}>&uarr;</div>
+            <div onClick={()=>document.querySelector('.Contact').scrollIntoView()}>&darr;</div>
         </div>
 
     </div>
