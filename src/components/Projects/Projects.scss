@@ -48,11 +48,12 @@
         display: inline-block;
         width: 14rem;
         margin: 0 .7rem 0 0;
-        line-height: 3;
+        display: inline-grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
         img{
             height: 2rem;
             margin-right: .5rem;
-            top: .4rem;
         }
     }
 
@@ -209,7 +210,7 @@
     }
     .Project .btn__brick{
         margin-top: -2rem;
-        margin-bottom: -3rem;
+        margin-bottom: -1rem;
         top: 1.5rem;
     }
     .Project__scrolls{
