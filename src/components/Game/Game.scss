@@ -1,0 +1,139 @@
+@import './../App.scss';
+
+.Game{
+    min-height: 100vh;
+    .btn__brick{
+        margin: auto;
+    }
+    .section__body{
+        padding: 10rem 0;
+    }
+}
+.GameBox{
+    width: 100%;
+    margin: auto;
+}
+
+.game__container{
+    overflow: hidden; //for info el anim
+}
+.game__canvas{
+    width: 100%;
+    border: solid .1rem $grey-dark;
+
+}
+.game__messageBox{
+    @include coverParentEl(rgba(242,242,240,.9), absolute);
+    border: solid .1rem $grey-dark;
+    align-content: center;
+    color: $dark;
+    display: grid;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    z-index: 3;
+
+    .btn__brick{
+        margin-top: 3rem;
+    }
+
+}
+.game__message__title{
+    @include themify{
+        color: $color-darker;
+    }
+    font-size: 4rem;
+}
+.game__message_ctrs{
+    color: $grey_dark;
+    bottom: 3rem;
+    opacity: .6;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 4;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+
+.game__message__portrait{
+    display: none;
+}
+@include portrait{
+    .game__message__portrait{
+        @include coverParentEl(rgba(242,242,240,1), absolute);
+        align-content: center;
+        color: $grey-dark;
+        display: grid;
+        font-size: 1.6rem;
+        z-index: 3;
+        img{
+            display: inline-block;
+            left: 50%;
+            opacity: .5;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            z-index: -1;
+        }
+    }
+    .GameStats,
+    .GameInfo,
+    .GameInfo.is_hidden{
+        display: none;
+    }
+
+}
+@include desktop-sm{
+    .Game{
+        .section__body{
+            padding: 10rem 2rem;
+        }
+    }
+
+}
+@include tablet{
+
+    .Game{
+        min-height: auto;
+        .section__body{
+            padding: 10rem 5rem;
+        }
+    }
+
+    .game__message .btn__brick{
+        width: 18rem;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+    .game__message{
+        font-size: 1.4rem;
+        padding-top: 3rem;
+    }
+    .game__message__title{
+        font-size: 3rem;
+        margin-bottom: -1rem;
+    }
+    .game__message_ctrs{
+        font-size: 1rem;
+        bottom: 2rem;
+    }
+
+
+}
+@include mobile{
+    .GameBox{
+        .section__body{
+            padding: 10rem 5rem;
+        }
+    }
+    .game__message_ctrs{
+        font-size: .9rem;
+        bottom: 1rem;
+    }
+
+
+
+
+}

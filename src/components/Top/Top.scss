@@ -1,0 +1,122 @@
+@import './../App.scss';
+
+
+.Top{
+    .section__body{
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .title{
+        display: inline-block;
+        font-size: 4rem;
+        margin: auto;
+        padding-top: 5rem;
+        transition: 1s;
+
+    }
+    .title__span__hashtag{
+        font-weight: bold;
+        left: -2rem;
+        opacity: 0;
+        position: relative;
+        top: .5rem;
+    }
+    .title__span__hashtag_show{
+        left: -.5rem;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+    }
+    .theme-color_transitioned{
+        padding-right: .1rem;
+    }
+}
+.wall{
+    margin: auto;
+    width: 40rem;
+}
+.wall__brick{
+
+    background-image: url('../../imgs/bricks/brick_black.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    grid-area: brick;
+    height: 4.3rem;
+    margin-bottom: -.5rem;
+    opacity: 0;
+    top: -100vh;
+    transform: scale(1.05);
+    transition: transform .5s, opacity .5s, top 1s ease-in-out;
+    width: 10rem;
+
+}
+.wall__brick:nth-child(2n+5),
+.wall__brick:nth-child(6n+3){
+    top:0;
+    transform: scale(.5);
+}
+.wall__brick:nth-child(5n+5){
+    margin-left: 2rem;
+}
+.wall__brick:nth-child(12){
+    transform: scale(1);
+    @include themify {
+      background: url("#{$brick-themed}");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+}
+.rolling{
+    display: inline-block;
+    margin: auto;
+    margin-bottom: -3rem;
+    opacity: 0;
+    top: 5rem;
+    transition: 1s;
+}
+.scroller{
+    top: 4rem;
+    border-left: solid .1rem $grey-dark;
+    color: #F2F2F0;
+    display: inline-grid;
+    height: 12rem;
+    left: 50%;
+    letter-spacing: .5rem;
+    opacity: .3;
+    position: absolute;
+    width: .1rem;
+}
+
+@include tablet{
+
+}
+@include mobile{
+    .Top{
+        .title{
+            font-size: 3rem;
+        }
+    }
+
+}
+//wall width 40 rem + paddings
+
+@include mobile-sm{
+    .Top{
+        .title{
+            font-size: 2.6rem;
+        }
+    }
+    .wall{
+        width: 100%;
+        padding: 0 4rem;
+    }
+    .wall__brick{
+        margin-bottom: -1.2rem;
+        width: 8rem;
+
+    }
+
+}

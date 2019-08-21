@@ -1,0 +1,90 @@
+@import './../App.scss';
+.Contact{
+    min-height: 55rem;
+    line-height:1.4;
+
+    a,b{
+        font-weight: 400;
+        @include themify {
+            color: $color-darker;
+        }
+    }
+    h2{
+        margin-bottom: 1rem;
+    }
+    h3{
+        margin-bottom: -.5rem;
+    }
+}
+
+    // .wall{
+    //     // display: none;
+    //     padding-top: 3rem;
+    //     padding-bottom: 3rem;
+    //     position: absolute;
+    //     // top: -5rem;
+    //     width: 100%;
+    //
+    //     .wall__brick{
+    //         opacity: .2;
+    //         top: 0;
+    //         transition: 1.5s ease-in-out;
+    //         @include themify {
+    //           background: url("#{$brick-themed}");
+    //           background-position: center;
+    //           background-repeat: no-repeat;
+    //           background-size: contain;
+    //         }
+    //     }
+    //     .wall__brick:nth-child(5){
+    //         margin-left: 15rem;
+    //     }
+    //     .wall__brick:nth-child(6n+5){
+    //         margin-left: 10rem;
+    //     }
+    //     .wall__brick:nth-child(2n+5),
+    //     .wall__brick:nth-child(6n+3){
+    //         transform: scale(1);
+    //     }
+    //     .wall__brick:nth-child(12){
+    //         // background-image: url('../../imgs/bricks/brick_black.png');
+    //
+    //
+    //     }
+    //
+    // }
+
+
+.section__call_for_action{
+    font-size: 1.6rem;
+    transition: .7s  ease-in-out;
+    padding:0 5rem 7rem;
+}
+.contact__details{
+    padding: 0 5rem;
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+
+}
+
+
+@include desktop-sm{
+
+}
+@include tablet{
+
+}
+@include mobile{
+    .Contact{
+        text-align: left;
+
+    }
+    .section__call_for_action{
+        padding-bottom: 13rem;
+    }
+    .contact__details{
+        font-size: 1rem;
+
+    }
+}

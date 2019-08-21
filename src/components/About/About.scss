@@ -1,0 +1,11 @@
+@import './../App.scss';
+
+.About{
+
+    h2{
+        @include themify {
+          color: $color-primary;
+        }
+    }
+
+}

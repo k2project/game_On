@@ -1,0 +1,97 @@
+@import './../App.scss';
+
+$side-pading: 7rem;
+
+.Header{
+    align-items: center;
+    background: #fff;
+    display: grid;
+    font-size: 1.4rem;
+    grid-template-columns: 1fr auto auto auto;
+    padding: 4rem 0 3.5rem;
+    overflow: hidden;
+    text-align: left;
+    div,a{
+        background: #fff; //for email text anim
+    }
+    img{
+        height: 2rem;
+        padding: 0 .7rem;
+
+    }
+    a:last-child{
+        padding-right: $side-pading;
+        img{
+            padding-right: 0;
+        }
+    }
+}
+.header__title{
+    font-weight: bold;
+    padding-left: $side-pading;
+
+}
+.header__mail{
+    left: 16.5rem;
+    transition: .7s;
+    span{
+        left: 5rem;
+        padding-right: .7rem;
+        opacity: 0;
+        top:-.5rem;
+        transition: all 1s ease-in-out;
+    }
+    img{
+        cursor: pointer;
+        height: 1.8rem;
+    }
+}
+.header__mail:hover{
+    left: 0;
+    transition: 1s;
+    span{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@include tablet{
+    $side-pading: 4rem;
+    .Header{
+        a:last-child{
+            padding-right: $side-pading;
+        }
+    }
+    .header__title{
+        padding-left: $side-pading;
+    }
+
+
+
+}
+@include mobile{
+    .Header{
+        grid-template-columns: 1fr auto auto;
+
+    }
+    .header__mail{
+        display: none;
+    }
+
+
+}
+@include mobile-sm{
+    $side-pading: 3rem;
+    .Header{
+        a:last-child{
+            padding-right: $side-pading;
+        }
+    }
+    .header__title{
+        padding-left: $side-pading;
+        padding-right: 4rem;
+    }
+
+
+
+}

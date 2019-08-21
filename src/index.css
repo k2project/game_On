@@ -1,0 +1,36 @@
+
+html{
+    font-size: 62.5%;
+}
+body{
+    color: #373330;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Poiret One', cursive; */
+    font-size: 1.2rem;
+    text-align: center;
+    /* overflow-x: hidden; */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+li,ol{
+    list-style: none;
+    display: inline-block;
+}
+a:link,a:visited ,a:hover,a:active {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+input, button, select{
+    border: none;
+}
+button:focus{
+    outline: none;
+}
+.btn__brick{
+     background-image: url('./imgs/bricks/brick_btn.png');
+}

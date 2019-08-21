@@ -1,0 +1,363 @@
+$color-theme:#00bfa5;
+
+$grey-light:#F2F2F0;
+$grey-dark: #a5a5a2;
+$dark:#2f2f2c;
+$black: #3F3F3F;
+
+
+$color-primary: null;
+$color-secondary: null;
+$color-darker: null;
+$color-lighter: null;
+$brick-themed:null;
+$bg-themed:null;
+
+$themes:(
+    // blue
+    'level-1':(
+        'primary':   #15AABF,
+        'secondary': #93E7F3,
+        'darker':    #22B8CF,
+        'lighter':   #E1F8FC,
+        'img': "../../imgs/bricks/brick_blue_full.png",
+        'bg': "../../imgs/bricks/bg_blue.png",
+    ),
+    // pink
+    'level-2':(
+        'primary':   #EA1D60,
+        'secondary': #FBBED3,
+        'darker':    #F3719C,
+        'lighter':   #FEF0F5,
+        'img': "../../imgs/bricks/brick_pink_full.png",
+        'bg': "../../imgs/bricks/bg_pink.png",
+    ),
+    //yellow
+    'level-3':(
+        'primary':   #FFC107,
+        'secondary': #FFE187,
+        'darker':    #FFD454,
+        'lighter':   #FFF9E7,
+        'img': "../../imgs/bricks/brick_yellow_full.png",
+        'bg': "../../imgs/bricks/bg_yellow.png",
+    ),
+    //green
+    'level-4':(
+        'primary':   #82c91e,
+        'secondary': #c0e48e,
+        'darker':    #94D82D,
+        'lighter':   #F4FCE7,
+        'img': "../../imgs/bricks/brick_green_full.png",
+        'bg': "../../imgs/bricks/bg_green.png",
+    )
+)!default;
+
+@mixin themify($themes: $themes) {
+  // Iterate over the themes
+  @each $theme, $colors in $themes {
+    // Create a selector (e.g. `.media.theme-unicorn, .theme-unicorn .media`)
+    .theme-#{$theme} & {
+      // Set the theme variables with `!global`
+      $color-primary: map-get($colors, 'primary') !global;
+      $color-secondary: map-get($colors, 'secondary') !global;
+      $color-darker: map-get($colors, 'darker') !global;
+      $color-lighter: map-get($colors, 'lighter') !global;
+      $brick-themed:map-get($colors, 'img') !global;
+      $bg-themed:map-get($colors, 'bg') !global;
+
+      // Output user content
+      @content;
+
+      // Unset the theme variables with `!global`
+      $color-primary: null !global;
+      $color-secondary: null !global;
+      $color-darker: null !global;
+      $color-lighter: null !global;
+      $brick-themed: null !global;
+      $bg-themed: null !global;
+    }
+  }
+}
+
+.theme-color_transitioned{
+    @include themify {
+      color: $color-primary;
+    }
+    transition: color 1s ;
+}
+
+.color_grey{
+    color: #afafaf;
+}
+.text_ctr{
+    text-align: center;
+}
+@mixin coverParentEl($color:transparent,$position:relative, $height:100%, $width:100%, $top:0, $left:0){
+    background: $color;
+    height: $height;
+    left: $left;
+    position: $position;
+    top:$top;
+    width: $width;
+}
+@mixin wrapper($width){
+    .section__body{
+        margin: auto;
+        width:$width;
+
+    }
+}
+
+@mixin shadowEffectRight($width:50%,$display:block){
+    display: $display;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 1.5rem;
+    right: 1rem;
+    left: auto;
+    width: $width;
+    top: 80%;
+    max-width:40rem;
+    background: #777;
+    box-shadow: 0 1.5rem 1rem #777;
+    transform: rotate(3deg);
+}
+@mixin shadowEffectLeft($width:50%,$display:block){
+
+    display: $display;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 1.5rem;
+    left: 1rem;
+    width: $width;
+    top: 80%;
+    max-width:40rem;
+    background: #777;
+    box-shadow: 0 1.5rem 1rem #777;
+    transform: rotate(-3deg);
+}
+
+@mixin desktop-sm{
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin tablet{
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mobile{
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile-sm{
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+@mixin portrait{
+    @media only screen and (max-width: 768px) and (orientation: portrait){
+        @content;
+    }
+}
+@mixin landscape{
+    @media only screen and (max-width: 768px) and (orientation: landscape){
+        @content;
+    }
+}
+
+
+// global styling
+.txt_rgt{
+    text-align: right;
+}
+.txt_ctr{
+    text-align: center;
+}
+.e{
+    display: inline-block;
+    left: -.1rem;
+    animation: rotateE .75s linear forwards;
+}
+@keyframes rotateE{
+    to{
+        transform: rotate(-45deg);
+    }
+}
+.mobile{
+    display: none;
+}
+
+p{
+    margin:1rem auto;
+}
+
+.section{
+    background: #fff;
+    display: grid;
+    grid-template-columns: 15rem 1fr 12rem;
+}
+
+.section_grey{
+    background: #F2F2F0;
+    width: 100%;
+}
+
+.section__title span{
+    display: inline-block;
+    padding-bottom: 15rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    width: 30rem;
+}
+.section__body{
+    padding: 15rem 0;
+    align-content: center;
+    display: grid;
+    min-height: 55rem;
+    max-width: 120rem;
+    width: 100%;
+    justify-self: center;
+}
+.section__body.section_2clm{
+    h2{
+        font-size: 2.5rem;
+    }
+    grid-template-columns: 30rem 1fr;
+    text-align: left;
+    align-items: center;
+    grid-column-gap: 5rem;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.btn__brick{
+    font-weight: bold;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #111;
+    display: block;
+    opacity: .5;
+    padding: 3rem;
+    transition: .25s;
+    width: 23rem;
+    text-align: center;
+}
+.btn__brick:hover{
+    cursor: pointer;
+    opacity: .8;
+    transition: .2s;
+}
+
+
+
+//=================
+//=====FOOTER=====
+//=================
+footer{
+    background: $black;
+    color: #cfcfcf;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 3rem;
+}
+//=================
+//=====COOKIES=====
+//=================
+.Cookies{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    width: 100%;
+    background:$black;
+    color: #fff;
+    padding: 3rem 7rem;
+    z-index: 99;
+
+}
+.Cookies b{
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+}
+
+/* ...1200=====1024====tablet=====768=====mobile===480====320.... */
+@include desktop-sm{
+    body {
+        border: solid .2rem orange;
+    }
+    .section{
+        grid-template-columns: 10rem 1fr 8rem;
+    }
+    .section__title span{
+        padding-bottom: 17rem;
+    }
+    .section__body.section_2clm{
+        padding: 15rem 6rem;
+    }
+}
+@include tablet{
+    body {
+        border: solid .2rem red;
+    }
+    .section{
+        grid-template-columns: 1fr;
+    }
+    .section__title span{
+        display: none;
+    }
+    .section__body{
+        padding: 10rem 0;
+    }
+    .section__body.section_2clm{
+        padding: 10rem;
+    }
+    .Cookies{
+        padding: 2rem 4rem;
+    }
+}
+@include mobile{
+    body {
+        border: solid .2rem blue;
+    }
+    .section_2clm h2{
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+    }
+    // .section_2clm p{
+    //     text-align: justify;
+    // }
+    .section__body.section_2clm {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        padding: 12rem 5rem;
+        grid-column-gap: 0;
+    }
+    .mobile{
+        display: block;
+    }
+    .Cookies{
+        text-align: justify;
+        font-size: 1rem;
+    }
+    .Cookies b{
+        padding-left: 0;
+        display: block;
+        text-align: right;
+        padding-top: 1rem;
+    }
+}
+@include mobile-sm{
+    body {
+        border: solid .2rem yellow;
+
+    }
+    .Cookies{
+        padding: 2rem 3rem;
+    }
+
+}

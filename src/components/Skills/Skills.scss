@@ -1,0 +1,126 @@
+@import './../App.scss';
+.Skills{
+    overflow: hidden;
+    .btn__brick{
+        margin: 4rem 0 0;
+    }
+    .section__body.section_2clm{
+        grid-template-columns: 1fr auto;
+        grid-column-gap: 3rem;
+    }
+    margin-bottom: calc( (100vh - 55rem ) / -2 ); //for stickyEl top padding
+}
+
+.skills__box{
+    margin: auto;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+    left: 2rem;
+}
+
+.progress-bar{
+}
+.circle-background,
+.circle-progress {
+  fill: none;
+}
+
+.circle-background {
+    stroke: $grey-light;
+}
+
+.circle-progress {
+    stroke: $grey-light;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+.skills_unlocked .circle-progress{
+    @include themify{
+        stroke: $color-darker;
+    }
+
+}
+.circle-text{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.skills_unlocked .circle-text{
+    color: $grey-light;
+
+}
+@include desktop-sm{
+    .Skills .section__body.section_2clm{
+        grid-column-gap: 2rem;
+    }
+    .progress-bar{
+        transform: scale(.8);
+        margin: -1rem;
+    }
+    .skills__box{
+        grid-gap:0;
+    }
+
+}
+@include tablet{
+
+    .progress-bar{
+        transform: scale(.7);
+        margin: -2.7rem -2.5rem;
+    }
+
+
+}
+@include mobile{
+    .Skills{
+        margin-bottom: 0; //for stickyEl top padding
+    }
+    .Skills .section__body.section_2clm{
+        grid-template-columns: 1fr;
+    }
+    .progress-bar{
+        transform: scale(.85);
+        margin: -1rem;
+    }
+    .skills__box{
+        left: 0;
+        top: -4rem;
+        margin: auto;
+        padding-bottom: 5rem;
+    }
+    .Skills .btn__brick{
+        margin: 0 auto;
+        top: 44rem;
+        z-index: 3;
+    }
+
+}
+@include mobile-sm{
+
+    .progress-bar{
+        transform: scale(.5);
+        margin:-4.1em -4.7rem;
+    }
+    .skills__box{
+        top: -3rem;
+        float: left;
+        padding-bottom: 10rem;
+
+    }
+    .Skills .btn__brick{
+            margin: 0;
+            top: 31rem;
+            z-index: 3;
+        }
+
+}
+@include portrait{
+    .Skills .btn__brick{
+        visibility: hidden;
+    }
+    .skills__box{
+        margin-bottom: -15rem;
+    }
+}

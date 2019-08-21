@@ -1,0 +1,121 @@
+@import './../../App.scss';
+
+.GameStats{
+    width: 100%;
+    align-items: center;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-column-gap: 3rem;
+    grid-column: span 2;
+    margin: 0 auto 2rem;
+
+}
+.stats__lives{
+    b{
+        padding-right:1rem;
+    }
+    img{
+        margin: 0 .1rem;
+        // top: .5rem;
+        width: 2rem;
+    }
+}
+.stats__progress-bar{
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1rem;
+    // padding-left: 4rem;
+    top: .5rem;
+
+    .bar{
+        height: 1rem;
+        background: #e2e2e0;
+        border-radius: 1rem;
+        margin:auto;
+        overflow: hidden;
+
+        width: 100%;
+        span{
+            display: block;
+            border-radius: 1rem;
+            @include coverParentEl();
+            @include themify {
+                background: $color-primary;
+                background: url("../#{$brick-themed}");
+                background-size: contain;
+            }
+            transition: 1s;
+            width: 90%;
+        }
+
+    }
+
+}
+.stats__level{
+
+    top: .5rem;
+    b{
+        padding-right: 1rem;
+    }
+    span{
+        border: solid .1rem $grey-dark;
+        border-radius: 100%;
+        display: inline-block;
+        height: 2rem;
+        color: $grey-dark;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: .2rem;
+        opacity: .3;
+        text-align: center;
+        width: 2rem;
+    }
+    span.stats__level_current{
+        @include themify{
+            border-color: $color-darker;
+            background: $color-darker;
+            background: url("../#{$bg-themed}");
+            background-size: contain;
+            color: #111;
+            opacity: 1;
+        }
+    }
+
+}
+.stats__settings{
+    height: 2.5rem;
+    top: .6rem;
+    opacity: .5;
+    cursor: pointer;
+    z-index: 9;
+}
+
+@include portrait{
+
+    .GameStats{
+        display: none;
+    }
+
+}
+@include desktop-sm{
+
+}
+@include tablet{
+
+    .GameStats{
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+
+    .stats__progress-bar{
+        grid-row: 2;
+        grid-column:1/4;
+    }
+    .stats__level{
+        text-align: right;
+    }
+
+
+}

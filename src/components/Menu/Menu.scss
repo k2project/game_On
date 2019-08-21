@@ -1,0 +1,66 @@
+@import './../App.scss';
+
+.Menu{
+    align-content: center;
+    display: grid;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15rem;
+    z-index: 8;
+    li{
+        background: none;
+        border: solid .2rem $grey-dark;
+        border-radius: 100%;
+        cursor: pointer;
+        display: inline-block;
+        height: 1.5rem;
+        margin: .4rem auto;
+        transform: scale(0);
+        transition: transform .5s;
+        width: 1.5rem;
+        color: $grey-dark;
+
+    }
+
+    li.in_view{
+        @include themify{
+            border-color: $color-darker;
+            background: url("#{$bg-themed}");
+            background-size: 100% 100%;
+            color: $color-darker;
+        }
+    }
+    span{
+        position: absolute;
+        width: 6rem;
+        text-align: right;
+        right: 0;
+        line-height: 1;
+        opacity: 0;
+        visibility: hidden;
+
+    }
+    li:hover span{
+        opacity: 1;
+        right: 2.5rem;
+        visibility: visible;
+        transition: .5s ease-out;
+    }
+}
+
+
+@include desktop-sm{
+    .Menu{
+        width: 12rem;
+        span{
+            display: none;
+        }
+    }
+}
+@include tablet{
+    .Menu{
+        display: none;
+    }
+}

@@ -1,0 +1,98 @@
+@import './../../App.scss';
+$infoWidth : 50rem;
+
+.GameInfo{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    transition: .25s;
+    @include themify{
+        background: rgba($color-secondary, 1);
+    }
+    z-index: 5;
+    font-size: 1rem;
+    line-height: 1.4;
+    p{
+        font-size: 1rem;
+        margin: 1rem 0 .5rem;
+    }
+}
+.info__title{
+    width: 100%;
+    padding-right: $infoWidth; //.info__details width
+    height: 100%;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(0,0,0,.4);
+    b{
+        font-size: 2rem;
+    }
+    img{
+        margin: auto;
+        opacity: .4;
+        height: 6rem;
+        cursor: pointer;
+    }
+}
+.info__details{
+    right: -100%;
+    transition: .25s  ease-in-out;
+    padding: 5rem 5rem 7rem;
+    height: 100%;
+    width: $infoWidth;
+    position: absolute;
+    display: grid;
+    align-content: center;
+    top: 0;
+    @include themify{
+        // background: $color-secondary;
+    }
+    background: #3f3f3f;
+    color: #eee;
+    b{
+        padding-top: 3rem;
+    }
+
+}
+
+.GameInfo.is_hidden{
+    left: 0;
+    transition: 0.5s;
+    .info__details{
+        right: 0rem;
+        transition: .25s  .2s ease-in-out;
+    }
+
+
+}
+.info__arrows{
+    display: inline-block;
+    font-size: 2.6rem;
+    left: 1.5rem;
+    margin-top: -2rem;
+}
+.info__progress{
+    cursor: pointer;
+    left: 1rem;
+    @include themify{
+        color: $color-darker;
+    }
+}
+
+@include tablet{
+    .info__title{
+        padding-right: 0;
+    }
+    .info__details{
+        width: 100%;
+
+
+    }
+
+}
