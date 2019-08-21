@@ -735,7 +735,7 @@ class GameBox extends Component {
                   {
                       game.paused&&<div className="game__messageBox" onClick={this.handleTap}>
                         <div className="game__message">
-                            <div className="game__message__title" data-state="start">L<span class="e">e</span>T's PLAY! </div>
+                            <div className="game__message__title" data-state="start">L<span className="e">e</span>T's PLAY! </div>
                             <p>Destroy all the bricks to get to another level <br/> and to reveal my skills.</p>
                         </div>
                         <p className="game__message_ctrs">HIT SPACE or TAP THE SCREEN to start/pause/unpause the Game. <br/>Use arrows (R/L) or swipe movements to position/move the pad. <br/>And to get the ball rolling HIT SPACE/TAP SCREEN again. <br/> </p>

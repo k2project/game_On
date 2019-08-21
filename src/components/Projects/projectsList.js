@@ -24,12 +24,12 @@ export const projects=[
     {
         id:'Projects Three and Four',
         multiple:true,
-        title: (<div class="Project__multiple">
-            <div class="Project__multiple_name">
+        title: (<div className="Project__multiple">
+            <div className="Project__multiple_name">
                 <p>AMB Collaborative </p>
                 <p>Marc McBride </p>
             </div>
-            <div class="Project__multiple_links">
+            <div className="Project__multiple_links">
                 <p>
                     <a href="https://github.com/k2project/fred_mcBride"  target="_blank" rel="noopener noreferrer"><img src={github} alt="GitHub"/></a>
                     <a href="http://ambcollaborative.com/"  target="_blank" rel="noopener noreferrer"><img src={globe} alt="Website"/></a>
@@ -41,7 +41,7 @@ export const projects=[
 
             </div>
         </div>),
-        desc:(<p> Responsive single page applications both built with React.js. End-to-end commercial projects. <i>Marc McBride</i> features HTML5 Video with fully customised contollers. </p>),
+        desc:(<span> Responsive single page applications both built with React.js. End-to-end commercial projects. <i>Marc McBride</i> features HTML5 Video with fully customised contollers. </span>),
         tools:(<span>ReactJS &bull; Sass &bull; CSS Grid</span>),
         img:'mcbride.png',
     },
@@ -68,7 +68,7 @@ export const projects=[
     {
         id:'Project Seven',
         title: 'SPM Advisors',
-        desc:(<p>My first commercial end-to-end websites built only with JavaScript and jQuery. While the code is far from a presentable example ( more like embarasing! ), I have decided to feature it along other projects to show how far I have come as webdeveloper. </p>),
+        desc:(<span>My first commercial end-to-end websites built only with JavaScript and jQuery. While the code is far from a presentable example ( more like embarasing! ), I have decided to feature it along other projects to show how far I have come as webdeveloper. </span>),
         tools:(<span>JavaScript &bull; jQuery</span>),
         web:'http://spm-advisors.com/',
         img:'spm.png',
