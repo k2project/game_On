@@ -16,7 +16,7 @@ class GameBox extends Component {
                 moving:false,
                 newX:2,
                 newY:-2,
-                speed:10, /* decrease to speed up the ball*/
+                speed:10, /* decrease to speed up the ball: 10*/
 
             },
             bricks:{

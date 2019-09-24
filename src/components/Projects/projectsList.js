@@ -6,7 +6,7 @@ export const projects=[
     {
         id:'Project One',
         title: 'Murray Grant Official Website',
-        desc:' Responsive single page application built with React.js. End-to-end commercial project delivered with Agile methodology. Features multiple swipable carousels with reusable functions and HTML5 Video. ',
+        desc:' Responsive single page application built with React.js. End-to-end commercial project delivered with Agile methodology. Features multiple swipeable carousels with reusable functions and HTML5 Video. ',
         tools:(<span>ReactJS &bull; Sass &bull; CSS Grid &bull; CSS Flexbox</span>),
         web:'http://www.murraygrantofficial.com',
         github:'https://github.com/k2project/murray_grant',
@@ -15,7 +15,7 @@ export const projects=[
     {
         id:'Project Two',
         title: 'Rose Theatre Edinburgh',
-        desc:'  Responsive single page application built with both Meteor.j and React.js. End-to-end commercial project for Edinburgh\'s local theatre. Features dinamically created routes based on a list of the currently running shows.',
+        desc:'  Responsive single page application built with both Meteor.j and React.js. End-to-end commercial project for Edinburgh\'s local theatre. Features dynamically created routes based on a list of the currently running shows.',
         tools:(<span>MeteorJs &bull; ReactJS &bull; Sass &bull; CSS Grid
     </span>),
         web:'https://www.rosetheatreedinburgh.com/',

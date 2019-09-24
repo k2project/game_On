@@ -116,7 +116,7 @@ class App extends Component {
               </div>
               <Contact/>
               <footer>
-                  Krzysztof Kopczynski | <b>FED</b> | Edinburgh {new Date().getFullYear()}
+                  <h1>Krzysztof Kopczynski</h1> | <b>FED</b> | Edinburgh {new Date().getFullYear()}
               </footer>
           </main>
         );

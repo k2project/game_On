@@ -33,6 +33,11 @@
 .mobile {
   display: none; }
 
+h1 {
+  font-weight: 400;
+  font-size: 1rem;
+  display: inline-block; }
+
 p {
   margin: 1rem auto; }
 
@@ -171,7 +176,8 @@ footer {
 
 .game__canvas {
   width: 100%;
-  border: solid 0.1rem #a5a5a2; }
+  border: solid 0.1rem #a5a5a2;
+  cursor: pointer; }
 
 .game__messageBox {
   background: rgba(242, 242, 240, 0.9);
