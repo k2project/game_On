@@ -41,7 +41,7 @@ export const projects=[
 
             </div>
         </div>),
-        desc:(<span> Responsive single page applications both built with React.js. End-to-end commercial projects. <i>Marc McBride</i> features HTML5 Video with fully customised contollers. </span>),
+        desc:(<span> Responsive single page applications both built with React.js. End-to-end commercial projects. <i>Marc McBride</i> features HTML5 Video with fully customised controllers. </span>),
         tools:(<span>ReactJS &bull; Sass &bull; CSS Grid</span>),
         img:'mcbride.png',
     },
@@ -68,8 +68,8 @@ export const projects=[
     {
         id:'Project Seven',
         title: 'SPM Advisors',
-        desc:(<span>My first commercial end-to-end websites built only with JavaScript and jQuery. While the code is far from a presentable example ( more like embarasing! ), I have decided to feature it along other projects to show how far I have come as webdeveloper. </span>),
-        tools:(<span>JavaScript &bull; jQuery</span>),
+        desc:(<span>My first commercial end-to-end websites built only with jQuery. While the code is far from a presentable example ( more like embarrassing! ), I have decided to feature it along with other projects to show how far I have come as a web developer. </span>),
+        tools:(<span>jQuery</span>),
         web:'http://spm-advisors.com/',
         img:'spm.png',
     },
