@@ -72,7 +72,7 @@ export const projects=[
         tools:'ReactJS, SVG, CSS Animation',
         web:'https://k2project.github.io/donut_chart/',
         github:'https://github.com/k2project/donut_chart',
-        img:'chart.png',
+        img:'chart2.gif',
     },
     {
         id:'Project Eight',
