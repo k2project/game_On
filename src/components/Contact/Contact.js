@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react';
 import './Contact.css';
+import KrisKopczynskiResume from './../../imgs/KrisKopczynskiResume.pdf';
 
 export default function Contact() {
 
@@ -24,7 +25,7 @@ export default function Contact() {
                     <div className="section__call_for_action">
                         <h2>Let's work Together to build something amazing.</h2>
                             Maybe not walls though... Keep on knocking those down!
-
+                            <a href={KrisKopczynskiResume} download className="btn__brick">Download resume</a>
                     </div>
                     <div className="contact__details">
                         <h3>The ball is in your court now!</h3>

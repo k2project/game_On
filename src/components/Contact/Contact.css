@@ -173,10 +173,25 @@ footer {
       color: #FFD454; }
     .theme-level-4 .Contact a, .theme-level-4 .Contact b {
       color: #94D82D; }
+  .theme-level-1 .Contact a.btn__brick {
+    color: #000;
+    font-weight: bold; }
+  .theme-level-2 .Contact a.btn__brick {
+    color: #000;
+    font-weight: bold; }
+  .theme-level-3 .Contact a.btn__brick {
+    color: #000;
+    font-weight: bold; }
+  .theme-level-4 .Contact a.btn__brick {
+    color: #000;
+    font-weight: bold; }
   .Contact h2 {
     margin-bottom: 1rem; }
   .Contact h3 {
     margin-bottom: -.5rem; }
+  .Contact .btn__brick {
+    margin: 3rem auto -3rem;
+    font-size: 1.2rem; }
 
 .section__call_for_action {
   font-size: 1.6rem;
@@ -190,6 +205,10 @@ footer {
   width: 100%; }
 
 @media only screen and (max-width: 768px) {
+  .Contact .btn__brick {
+    width: 22rem;
+    margin: 2rem 0 -3rem;
+    font-size: 1.2rem; }
   .Contact {
     text-align: left; }
   .section__call_for_action {

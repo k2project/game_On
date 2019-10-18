@@ -7,14 +7,30 @@
         font-weight: 400;
         @include themify {
             color: $color-darker;
+
+        }
+    }
+    a.btn__brick{
+
+        @include themify {
+            color: #000;
+            font-weight: bold;
+
         }
     }
     h2{
         margin-bottom: 1rem;
     }
     h3{
+
         margin-bottom: -.5rem;
     }
+    .btn__brick{
+        margin: 3rem auto -3rem;
+        font-size: 1.2rem;
+
+    }
+
 }
 
     // .wall{
@@ -76,6 +92,12 @@
 
 }
 @include mobile{
+    .Contact .btn__brick{
+        width: 22rem;
+        margin: 2rem 0 -3rem;
+        font-size: 1.2rem;
+
+    }
     .Contact{
         text-align: left;
 
