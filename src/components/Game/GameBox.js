@@ -729,7 +729,7 @@ class GameBox extends Component {
           <div className="GameBox">
               <GameStats gameStatesProps={gameStatesProps} />
               <div className="game__container">
-                  <canvas className="game__canvas" width={canvas.width} height={canvas.height} onClick={this.handleTap}>
+                  <canvas className="game__canvas" width={canvas.width} height={canvas.height} onClick={this.handleTap} aria-label="canvas rendering break out game">
                       Your browser does not support the HTML5 canvas.
                   </canvas>
                   {

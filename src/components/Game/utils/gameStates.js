@@ -402,11 +402,11 @@ export const alerts=[
     '<div><div class="theme-color_transitioned game__message__title">L<span class="e">e</span>V<span class="e">e</span>L COMPL<span class="e">e</span>T<span class="e">e</span>D</div><p>To continue the game at another level<br/>HIT SPACE or TAP THE SCREEN</p></div>',
 
     // 3-gameCompleted
-    '<div><div class="theme-color_transitioned game__message__title">CONGRATULATION!</div><p>You have successfully completed the entire game.</p> <div class="btn__brick btn_restart">Start Again</div></div>',
+    '<div><div class="theme-color_transitioned game__message__title">CONGRATULATION!</div><p>You have successfully completed the entire game.</p> <button class="btn__brick btn_restart" aria-label="congratulation, you have completed all levels and can play agian">Start Again</button></div>',
 
     // 4-lostLife
     '<div><div class="theme-color_transitioned game__message__title">You\'v<span class="e">e</span> dropp<span class="e">e</span>d th<span class="e">e</span> ball!</div><p>HIT SPACE or TAP THE SCREEN to continue the game.</p></div>',
 
     // 5-gameOver
-    '<div><div class="theme-color_transitioned game__message__title">GAM<span class="e">e</span> OV<span class="e">e</span>R</div><p>Better luck next time...</p><div class="btn__brick btn_restart">Play Again</div></div>',
+    '<div><div class="theme-color_transitioned game__message__title">GAM<span class="e">e</span> OV<span class="e">e</span>R</div><p>Better luck next time...</p><button class="btn__brick btn_restart" aria-label="game over - play again">Play Again</button></div>',
 ];

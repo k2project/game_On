@@ -7,6 +7,7 @@ export default class GameInfo extends Component {
         super(props);
         this.state={
             saved:false,
+            ariaLabel: 'saved'
         }
         this.changeProgressStatus=this.changeProgressStatus.bind(this);
     }
@@ -15,6 +16,10 @@ export default class GameInfo extends Component {
         this.setState(prevState => ({
           saved: !prevState.saved
         }));
+        setTimeout(()=>{
+            const ariaLabel = this.state.saved ? 'unsaved' : 'saved';
+            this.setState({ariaLabel});
+        },0)
 
         const progressDesplay = document.querySelector('.info__progress');
         if(this.state.saved){
@@ -35,14 +40,14 @@ export default class GameInfo extends Component {
         }
     }
     render() {
+
         return(
             <div className="GameInfo">
-                <div className="info__title" onClick={()=>document.querySelector('.GameInfo').classList.toggle('is_hidden')}>
-                    <img src={settings} alt="settings icon"/>
+                <button className="info__title" aria-label="close settings" onClick={()=>document.querySelector('.GameInfo').classList.toggle('is_hidden')}>
+                    <img src={settings} alt=""/>
+                    <span aria-hidden="true"> <b>Game's Settings</b> <br/>Click on the icon again to close Settings.</span>
 
-                    <p> <b>Game's Settings</b> <br/>Click on the icon again to close Settings.</p>
-
-                </div>
+                </button>
                 <div className="info__details">
                         <p><b>THE GAME GOAL IS TO DESTROY ALL THE BRICKS AT EACH LEVEL TO REVEAL CORRESPONDING SKILLS.</b></p>
                         <p>
@@ -53,7 +58,7 @@ export default class GameInfo extends Component {
                         <p><b>SUPER-BRICKS :</b></p>
                         Super-bricks (black ones) must be hit twice to be destoyed.
 
-                        <p><b>PROGRESS / LEVELS : <span onClick={this.changeProgressStatus}><i className="info__progress" >not saved*</i></span></b> </p>
+                        <p><b>PROGRESS / LEVELS : <button aria-label={`change game progress satus to ${this.state.ariaLabel}`} onClick={this.changeProgressStatus}><i className="info__progress" aria-hidden="true">not saved*</i></button></b> </p>
                         Save completed levels on your computer to have constant access to my skills. <br/>
                         <small><i>*Changing status to 'not saved' will reset settings of the app to the default.</i></small>
                 </div>

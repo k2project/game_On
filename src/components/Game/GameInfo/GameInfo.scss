@@ -28,13 +28,14 @@ $infoWidth : 50rem;
     display: grid;
     align-content: center;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     color: rgba(0,0,0,.4);
     b{
         font-size: 2rem;
+        line-height: 1.5;
     }
     img{
-        margin: auto;
+        margin: 0 auto 1rem;
         opacity: .4;
         height: 6rem;
         cursor: pointer;

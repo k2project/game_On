@@ -47,7 +47,7 @@ const GameStats= (props)=>{
                 <b>Current Level: </b>
                 {levelsList}
             </div>
-            <img src={settings} alt="settings" className="stats__settings" onClick={toggleInfo}/>
+            <img src={settings} alt="open settings" className="stats__settings" onClick={toggleInfo}/>
         </div>
     )
 }
