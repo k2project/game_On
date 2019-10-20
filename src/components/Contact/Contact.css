@@ -110,10 +110,10 @@ footer {
   padding: 3rem 7rem;
   z-index: 99; }
 
-.Cookies b {
-  cursor: pointer;
+.Cookies button {
   font-size: 1.4rem;
-  padding-left: 1rem; }
+  padding-left: 1rem;
+  color: #fff; }
 
 /* ...1200=====1024====tablet=====768=====mobile===480====320.... */
 @media only screen and (max-width: 1200px) {

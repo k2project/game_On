@@ -100,7 +100,7 @@ class App extends Component {
           <main className={`App theme-level-${levels.currentLevel}`}>
               {this.state.cookies && <div className="Cookies">
                   This website uses cookies solely for functional purposes to ensure you get the best experience. If you continue to use this service, you agree to the use of such cookies.
-                  <b onClick={this.setCookies}> Got it! </b>
+                  <button onClick={this.setCookies} aria-label="Accept cookies policy"> Got it! </button>
 
               </div>}
               <Header/>
