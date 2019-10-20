@@ -75,7 +75,7 @@ export default function Skills( props ){
                          <div className="skills__list">
                              {skillsList}
                          </div>
-                         <div className="btn__brick" onClick={scrollToGame}>Back to the Game</div>
+                         <button aria-label="go back to the game" className="btn__brick" onClick={scrollToGame}>Back to the Game</button>
                      </div>
                      <div className="txt_ctr">
                          <div className="skills__box">

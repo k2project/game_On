@@ -43,12 +43,12 @@ function displayProject(project){
                 <p>{project.desc}</p>
                 <p><b>{project.tools}</b></p>
                 {!project.multiple && <p className="btns">
-                    {project.github && <a href={project.github} className="btn__brick"  target="_blank"><img src={github} alt="GitHub link"/>GitHub</a>}
-                    <a  href ={project.web} className="btn__brick" target="_blank"><img src={globe} alt="website link"/>Website</a>
+                    {project.github && <a href={project.github} className="btn__brick"  target="_blank"><img src={github} alt="website source code on GitHub opens in a new window"/>GitHub</a>}
+                    <a  href ={project.web} className="btn__brick" target="_blank"><img src={globe} alt={`${project.web} opens in a new window`}/>Website</a>
                 </p>}
 
             </div>
-            <img src={require('./../../imgs/'+project.img)} alt="projects" className="Project__img"/>
+            <img src={require('./../../imgs/'+project.img)} alt="website's screenshot" className="Project__img"/>
         </div>
         <div className="Project__scrolls">
             <div onClick={()=>window.scrollTo(0,0)}>&uarr;</div>
