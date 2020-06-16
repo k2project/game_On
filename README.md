@@ -1,4 +1,4 @@
-# Web Developer with balls.
+# Web Developer with balls Portfolio.
 
 An online portfolio built around break out game. Complete a level to unveil my skills. Give it a go and have a ball!
 
