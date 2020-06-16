@@ -1,10 +1,10 @@
 # Web Developer with balls.
 
-Online portfolio built around break out game. Complete a level to unveil my skills. Give it a go and have a ball!
+An online portfolio built around break out game. Complete a level to unveil my skills. Give it a go and have a ball!
 
 # Motivation
 
-I intented to build a fun portfolio based on break out game. There are 4 levels of 3 different, randomly generated bricks layouts. The farther you get the harder it gets to complete the level, with super bricks in the final two levels, that need to be hit twice to be distroyed. I used Canvas and React to create the game. 
+I intended to build a fun, interactive portfolio based on break out game. To create the game I used HTML5 Canvas and React. There are 4 levels. Each level is made up of different, randomly generated bricks layouts. The farther you get the harder it is to complete the level, with super bricks in the final two levels, that need to be hit twice to be destroyed. Layouts created with two-dimensional arrays. You can save your progress ( level ) with customised settings ( localStorage ). 
 
 #Screenshot
 
@@ -13,7 +13,7 @@ I intented to build a fun portfolio based on break out game. There are 4 levels 
 # Tech/frameworks used
 
 - React
--HTML5 Canvas
+- HTML5 Canvas
 
 # Demo 
 
